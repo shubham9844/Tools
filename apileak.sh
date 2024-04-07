@@ -79,5 +79,4 @@ cat sort_urls.txt | grep ".js$" > jsfiles.txt
 
 source tools/bin/activate
 cat jsfiles.txt | while read url; do python3 secretfinder/SecretFinder.py -i $url -o cli>> secret.txt; done
-cat secret.txt | grep ">" | tee secret.txt
-cat secret.txt
+cat secret.txt | grep ">"
